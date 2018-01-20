@@ -637,3 +637,15 @@ Once the above options are set, return to the SCC main screen by entering 0.
     /opt/scc/Logs
 ----
 
+## Deprecated Content
+
+## Troubleshooting
+
+=== About ANSIBLE remediations
+
+Some remediations can be available in several formats. By default, the only format that will be executed during online and offline remedations is BASH. That means that even if Ansible remediations are available into the XCCDF file, they won't be used. Moreover, if a remediation contains only an Ansible playbook, there will be no fix applied because openscap can't process such a remediation script.
+
+However, it is possible to extract Ansible playbooks from XCCDF and apply them using the ansible-playbook command.
+
+Important note : Ansible playbook contained in the XCCDF files requires at least Ansible 2.3 to be correctly executed.
+
